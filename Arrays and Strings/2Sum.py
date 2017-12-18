@@ -18,3 +18,5 @@ class Solution(object):
                 return [d[nums[i]], i]
             else:
                 d[target-nums[i]] = i
+
+# This returns the indices of the two numbers that add to the target.
