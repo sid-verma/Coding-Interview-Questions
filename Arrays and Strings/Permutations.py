@@ -1,9 +1,9 @@
-#Given a collection of distinct numbers, return all possible permutations.
+# Given a collection of distinct numbers, return all possible permutations.
 
 # KEY STEP:
 # This is a one - liner solution so pay attention.
 # [n] is the first digit of the permutation
-# p is the list returned from recursively calling the permutation function after removing the 
+# p is the list returned from recursively calling the permutation function after removing the digit.
 class Solution(object):
     def permute(self, nums):
         """
