@@ -17,7 +17,7 @@ class Solution(object):
         """
         res = []
         nums.sort()
-        for i in xrange(len(nums)-2):
+        for i in range(len(nums)-2):
             if i > 0 and nums[i] == nums[i-1]: # This is to ensure that the numbers are not the same
                 continue
             start, end = i+1, len(nums)-1
@@ -35,3 +35,6 @@ class Solution(object):
                         end -= 1
                     start += 1; end -= 1
         return res
+
+obj = Solution()
+print(obj.threeSum([1,2,7,-1,4,0,-3,3,5,4,-3]))

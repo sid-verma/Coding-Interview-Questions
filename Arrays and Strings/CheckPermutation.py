@@ -32,8 +32,8 @@ def isPermutation2(a, b):
 	return True
 
 def main():
-	print isPermutation1('abcd', 'dcba')
-	print isPermutation2('vbfres', 'bfersv')
+	print(isPermutation1('abcdd', 'ddcba'))
+	print(isPermutation2('vbfres', 'bfersv'))
 
 if __name__ == '__main__':
 	main()
