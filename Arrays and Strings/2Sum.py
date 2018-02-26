@@ -13,10 +13,13 @@ class Solution(object):
         if len(nums) <= 1:
             return []
         d = {}
-        for i in xrange(len(nums)):
+        for i in range(len(nums)):
             if nums[i] in d:
-                return [d[nums[i]], i]
+                return [d[nums[i]], nums[i]]
             else:
-                d[target-nums[i]] = i
+                d[target-nums[i]] = nums[i]
 
 # This returns the indices of the two numbers that add to the target.
+
+obj = Solution()
+print(obj.twoSum([1,4,5,3,5,4,6,3,3,2,4], 7))
