@@ -16,7 +16,7 @@ class Solution(object):
         :type q: TreeNode
         :rtype: TreeNode
         """
-        def path(root, goal):
+        def pathfinder(root, goal):
             path, stack = [], [root]
             while True:
                 node = stack.pop()
@@ -28,4 +28,4 @@ class Solution(object):
                         stack += node, node.right, node.left
                     else:
                         path.pop()
-        return next(a for a, b in zip(path(root, p), path(root, q))[::-1] if a == b)
+        return next(a for a, b in zip(pathfinder(root, p), pathfinder(root, q))[::-1] if a == b)
