@@ -11,11 +11,11 @@ class Solution():
 	def createMinimalBST(self, arr):
 		return createMinimalBST(remaining_array, start, end)
 
-	def createMinimanBST(arr, start, end):
+	def createMinBST(arr, start, end):
 		if end < start:
 			return None
 		mid = (start + end)/2
 		n = TreeNode(arr[mid])
-		n.left = self.createMinimalBST(arr, start, mid-1)
-		n.right = self.createMinimalBST(arr, mid+1, end)
+		n.left = self.createMinBST(arr, start, mid-1)
+		n.right = self.createMinBST(arr, mid+1, end)
 		return n
