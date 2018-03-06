@@ -6,8 +6,8 @@
 
 # KEY STEP:
 # 1st loop - Remove elements that are negative and > array length.
-# 2nd loop - Hash elements in place by % len(arr) += len(arr)
-# 3rd loop - Elements that / len(arr) == 0 will be the 1st missing integer.
+# 2nd loop - Hash elements in place by arr[arr[i] % len(arr)] += len(arr)
+# 3rd loop - Elements that  arr[i]/len(arr) == 0 will be the 1st missing integer.
 
 # TC: O(n)
 # SC: O(1)

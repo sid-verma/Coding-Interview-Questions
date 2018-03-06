@@ -31,4 +31,3 @@ class Solution:
             maxl = max(maxl, sum(hm.values()))
             j += 1
         return maxl
-
