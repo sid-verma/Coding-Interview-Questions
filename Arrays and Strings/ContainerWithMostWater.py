@@ -15,13 +15,16 @@ class Solution(object):
         if height == []:
             return 0
         i = 0
-        j = len(height)
-        area = min(height[i], height[j-1]) * (j-i -1)
-        while i!= j-1:
-            if height[i] <= height[j-1]:
+        j = len(height)-1
+        area = min(height[i], height[j]) * (j-i)
+        while i!= j:
+            if height[i] <= height[j]:
                 i += 1
             else:
                 j -= 1
-            area = max(area, min(height[i], height[j-1]) * (j - i -1))
+            area = max(area, min(height[i], height[j]) * (j - i))
             
         return area
+
+obj = Solution()
+print(obj.maxArea([2,6,5,8,3,4,8,9,3,1]))
