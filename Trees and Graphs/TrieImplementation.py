@@ -1,3 +1,5 @@
+# Implement a Trie Data Structure with insert, search and delete functions.
+
 class TrieNode(object):
 	"""docstring for TrieNode"""
 	def __init__(self):
@@ -41,6 +43,22 @@ class TrieNode(object):
 			current.children.del(word[i])
 			return len(current.children.keys()) == 0
 		return False
+
+# A more Pythonic way to implement a Trie
+class InsertIntoTrie(object):
+	def __init(self, wordList):
+		"""words: list[str]"""
+		self.words = wordList
+		self.root = {}
+
+	def insert(self, node, wordList):
+		for word in wordList:
+			node = self.root
+			for char in word:
+				node = node.setdefault(char, {})
+			node[None] = True
+
+
 
 
 
