@@ -18,9 +18,10 @@
 # You may assume that row1 ≤ row2 and col1 ≤ col2.
 
 # KEY STEP: Implement using Binary Index Tree of size (m+1,n+1) if matrix size is (m,n)
+
 # Things to remember in Binary Index Tree
-# - Getting next node from current node i = i + 2's complement of i = i + i & (-i)
-# - Getting parent node from child node i =	i - 2's complement of i = i - i & (-i)
+# - Getting next node from current node i = i + 2's complement of i.e. i = i + i & (-i)
+# - Getting parent node from child node i =	i - 2's complement of i.e. i = i - i & (-i)
 
 # TC: Creating 1st time O(n log n)^2 since it's 2D
 #	  Updating O(log n)^2 since it's 2D
